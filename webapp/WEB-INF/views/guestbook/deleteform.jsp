@@ -11,7 +11,7 @@
 <head>
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/guestbook.css" rel="stylesheet" type="text/css">
+<link href="/mysite4/assets/css/guestbook.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="container">
@@ -27,7 +27,7 @@
 		</div>
 		<div id="content">
 			<div id="guestbook" class="delete-form">
-				<form method="post" action="/mysite/gb">
+				<form method="post" action="/mysite/guestbook">
 					<input type="hidden" name="a" value="delete">
 					<input type='hidden' name="no" value="${param.no}">
 					<label>비밀번호</label>

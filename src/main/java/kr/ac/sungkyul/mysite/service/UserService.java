@@ -3,6 +3,7 @@ package kr.ac.sungkyul.mysite.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import kr.ac.sungkul.mysite.exception.UserInfoUpdateException;
 import kr.ac.sungkyul.mysite.dao.UserDao;
 import kr.ac.sungkyul.mysite.vo.UserVo;
 
@@ -19,5 +20,20 @@ public class UserService {
 		UserVo authUser = userDao.get(email,password);
 		return authUser;
 	}
+	
+	public UserVo get(Long userNo){
+		UserVo authUser = userDao.get(userNo);
+		return authUser;
+	}
+	
+	public void update(UserVo vo){
+		try{
+		userDao.update(vo);
+		}catch( UserInfoUpdateException e){
+			
+		}
+	}
+	
+
 
 }
